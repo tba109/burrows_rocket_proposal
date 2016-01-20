@@ -1,0 +1,49 @@
+Thu Dec 29 17:38:49 EST 2011
+
+Here's a list of changes since the tcd_usb_development_Oct5 distro, which I used
+quite a bit for a long time.
+
+1.) tcd2_command.h: added #define TCDMT PXR
+2.) tcd2_command.h: added #define FLUSH 0x06
+3.) tcd2_command.h: added #define CLEAR 0x07
+4.) tcd2_command.h: added and redefined
+    #define CLEAR_LT 18	 
+    #define CLEAR_MT 19
+    #define MODE     20
+    #define CLEV     21
+    #define STKMSK   22
+5.) tcd2_command.h: changed #define NPARAMS 23
+6.) tcd2_command.c::command_receive: added FLUSH condition
+7.) tcd2_command.c::command_receive: added CLEAR_MT condition
+8.) tcd2_command.c::command_receive: added CLEAR condition
+9.) tcd2_command.c: added master_trigger_clear()
+10.) tcd2_command.c: added local_trigger_clear()
+11.) tcd2_comand.h: added master_trigger_clear() declaration
+12.) tcd2_command.h: added local_trigger_clear() declaration
+13.) tcd2_config.h: Changed MINREVNO to 2
+14.) tcd2_commands.h: Added #define SOFTRESET 0x50
+15.) tcd2_commands.c::command_receive: Added case for SOFTRESET
+16.) tcd2_flags.c::soft_resetn: Fixed bug IOA = IOA | 0x04; to IOA = IOA | 0x08;
+17.) tcd2_main.c::main: remove wait_one_second()
+18.) tcd2_main.c::main: change stkmsk to 0x03FF
+19.) tcd2_flags.h and tcd2_flags.c: added flush on PORTA4
+20.) tcd2_ep16_init.c: changed IFCONFIG per note for 24 MHz operation
+21.) tcd2_event.c: Add in the clearing the EP6IN when not readout
+22.) tcd2_command.c::command_fpga_receive: increased MAX_WAIT_COUNT to 100
+23.) tcd2_command.h: Added the INIT action as 0x03
+24.) tcd2_command.h: Added the stack_initalize() declaration
+25.) tcd2_command.c: Added stack_initialize() routine
+
+26.) In tcd2_event.c
+      ///////////////////////////////////////////////////////////////
+      // Tyler Anderson Thu Mar 15 15:42:01 EDT 2012
+      // After I integrated the TCD, we found that the 
+      // TCD was always reading one event behind the other
+      // instruments. It occurred to me that this might be because
+      // somewhere in the TCD CDAQ, we might be clearing without a
+      // read, such that the next event that the next time we get
+      // a trigger, the USB fifo still has the previous event's data
+      // in it. So, when we generate a new trigger, if the old data
+      // is still in the USB fifo, we need to clear it before refilling
+      // with the new data
+

@@ -1,0 +1,4 @@
+Tue Nov 23 11:19:08 EST 2010
+This is the flight firmware, which renumerates as VID 04B4, PID 0098.
+It uses the default USB device for commanding (EP1IN and EP1OUT) and
+event reading (EP6IN). 

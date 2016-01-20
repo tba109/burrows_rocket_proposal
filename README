@@ -1,0 +1,7 @@
+Wed Jan 20 13:35:59 EST 2016
+
+This is a collection of assembled software to push image data through the parallel 
+encoder for the proposal.  
+
+firmware: based on fx2lib and some sdcc software for the FX2LP. 
+software: based on PyUSB and Anaconda for Python 2.7.  

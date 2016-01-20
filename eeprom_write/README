@@ -1,0 +1,4 @@
+Tyler Anderson Mon Nov 22 16:38:18 EST 2010
+
+This is where I'll write code to flash the EEPROM so that I renumerate with whatever I want. Modify
+fx2_c0.c to change VID and PID.

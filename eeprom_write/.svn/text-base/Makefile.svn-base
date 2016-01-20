@@ -1,0 +1,30 @@
+## Note: You get several:
+## warning 94: comparison is always true due to limited range of data type
+## These are generated when asking if an unsigned byte is >= 0, via
+## textually defined constants like PXL and THR00. Note that I like these
+## comparisons there anyway, because if I ever decide to redefine this
+## range, I can.
+INCLUDES = -I../fx2lib/include 
+CC =  sdcc -mmcs51 --xram-loc 0x3000
+LIBS = fx2.lib -L../fx2lib/lib
+CFLAGS = --xram-loc 0x3000
+BASENAME = main
+CYCFX2PROG = cycfx2prog
+
+all : main.ihx
+
+main.ihx : fx2_c0.rel
+	$(CC) $(CFLAGS) $(INCLUDES) main.c fx2_c0.rel $(LIBS)
+
+fx2_c0.rel :
+	$(CC) $(CFLAGS) $(INCLUDES) -c fx2_c0.c $(LIBS)
+
+clean:
+	rm -f *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+	rm -f tmp/*.asm tmp/*.ihx tmp/*.lnk tmp/*.lst tmp/*.map tmp/*.mem tmp/*.rel tmp/*.rst tmp/*.sym
+
+.PHONY:run
+
+run: $(BASENAME).ihx
+	packihx $(BASENAME).ihx > $(BASENAME).hex
+	sudo fxload -v -t fx2 -I $(BASENAME).hex -D /dev/bus/usb/007/034

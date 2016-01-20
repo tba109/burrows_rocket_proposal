@@ -1,0 +1,104 @@
+TBA Thu Oct 21 17:49:39 EDT 2010
+This is a short study of command timing.
+
+0.25us for PORTA to go from high to low or low to high.
+36us to run command_parse_NR
+21.2us to run command_parse_R
+86us to run command_execute
+     45us to run command_set
+     	  42us from inside command_set, which appears to be the "single write"
+	       addressing time
+	  30us to change 6 parameters in single write (like changing CS)
+	  12us if you don't have to change 6 params, just set addrs
+6100us to run command_response (HiSpeed should improve this)
+206us to run command_buffer_clear
+
+
+156us for 1 command, same CS settings
+256us for 2 commands, same CS settings
+376us for 3 commands, same CS settings
+480us for 4 commands, same CS settings
+1840us for 16 commands
+
+Strange: I notice in ../fiforead that it takes about 1us to write GPIFADRL,
+whereas above I note something like 6us. Here's a few explanations as to why:
+-I'm doing arithmetic in the readout expression. Those several arithmetic operations
+ would be quite slow.
+-cmd_buffer is defined it __xdata, which is quite slow to access!
+
+-Tried the following to change with CS you are using
+idata unsigned char i;
+idata unsigned char * dest = 0xE400;
+  if( dest[49] != 0xFF )
+    for(i=0; i<6; i++)
+      dest[49+i] = 0x27;
+
+Gave about the same as before. ~20us.
+------------------------------------------------------------------------- 
+for(i=0; i<6; i++)
+    dest[49+i] = 0x27;
+
+gave about 15us
+
+-------------------------------------------------------------------------
+dest[49] = 0x27;
+dest[50] = 0x27;
+dest[51] = 0x27;
+dest[52] = 0x27;
+dest[53] = 0x27;
+dest[54] = 0x27;
+
+Gives 2.5us with dest as idata, 5us as __xdata. We have a winner, ladies and 
+gents! Let's use some of our precious idata here, as dest is in the critical
+path for readout.
+  
+Note: I noticed that in fx2regs, you have stuff defined as __xdata. I wonder
+if its okay to make the stuff I want to access inside the critical path
+idata, or perhaps define my own data routines!
+
+Fri Oct 22 12:44:06 EDT 2010
+Important: I noticed that in the TRM, waveforms always have an S0, probably
+so that the address can appear on the bus, followed by an s1, which I
+suppose is the time for the data to become valid, followed by data read or
+write, followed by a data high Z. I think I need to mirror that in my 
+own read and write waveforms. 
+ 
+Fri Oct 22 23:44:26 EDT 2010
+236.1us to read out the data. 4.75us / 4 data elements, but only 0.43us per
+element. 
+
+Sat Oct 23 00:33:58 EDT 2010
+Data waveform verified as looking correct (saying nothing about actually
+using this data to read something out, but at least the waveforms look to
+be working correctly!)
+ 
+Sat Oct 23 12:40:10 EDT 2010
+Using Wolfgang Wieser's bench_block, I can just see what sort of bandwidth
+I'm getting using USB. I'm using EP6IN and tying SLOE, FIFOADR1, SLRD high,
+while tying FIFOADR0 and SLWR low. I average ~24 MBps:
+
+24.334 23.979 23.697 25.638 24.261 23.958 25.542 23.853 23.411 24.773 25.147
+24.137 24.264 23.748  24.189 24.493 23.881 24.111 23.537 23.897 24.436 24.233 24.358 23.989 23.552 23.935 23.990 25.197 24.315 23.731 24.193 24.621 23.776 24.146 23.783 23.990 24.340 24.888 24.138 24.351 23.660 24.228 24.433 23.688 23.841 23.675 
+
+Sat Oct 23 13:07:52 EDT 2010
+Using the straight source code from fiforead.c, I get 384B in the FIFO in
+236us. That's not bad, but the source code for fiforead is 7300B (after 
+converting from a binary hex file.) I think I can make this much shorter
+by using a loop to read and making some global constants. We'll see if
+this really works, and how it effects performance in fiforead2.c
+
+The time jumped to 239.6us, practically nothing, but the code size dropped
+to 5412B--defintely a worthwhile improvement! A fair amount of that is
+probably just in the headers, etc, as I've seen in the past, so I'm pretty
+happy with this.
+
+Just tested, and actually, if I comment out all the stuff that's not the
+readout code (stuff that would already be in other places), I get 3704. So,
+my code is only 5412 - 3704 = 1708B--really, that's a pretty small change
+increase! I'm feeling good about the readout.
+
+Sat Oct 23 13:47:58 EDT 2010
+Now, add code to write to the USB port and take a measurement of max reaout
+speed, and time for readout.
+
+I get 1.5MBps +/- 0.04 bandwidth, reading out 
