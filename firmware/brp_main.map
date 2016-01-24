@@ -1,0 +1,707 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT                        
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  l_XSEG                          
+C:   00000002  l_BSEG_BYTES                    
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_HOME                          
+C:   00000006  l_ISEG                          
+C:   00000006  l_OSEG                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_BSEG                          
+C:   0000000A  l_GSINIT2                       
+C:   0000000E  s_OSEG                          
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000002A  l_GSINIT4                       
+C:   00000035  s_GSINIT4                       
+C:   00000036  l_CONST                         
+C:   0000003C  s_SSEG                          
+C:   0000005F  s_GSFINAL                       
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   00000062  s_CSEG                          
+C:   0000007A  l_DSEG                          
+C:   000000C4  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   000008F9  l_CSEG                          
+C:   0000095B  s_CONST                         
+C:   00000991  s_XINIT                         
+C:   00003200  s_PSEG                          
+C:   00003200  s_XSEG                          
+C:   00003201  s_XISEG                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _bp
+     00000080  _IOA                               serial
+     00000080  _PA0                               serial
+     00000081  _PA1                               serial
+     00000081  _SP                                serial
+     00000082  _DPL                               serial
+     00000082  _PA2                               serial
+     00000083  _DPH                               serial
+     00000083  _PA3                               serial
+     00000084  _DPL1                              serial
+     00000084  _PA4                               serial
+     00000085  _DPH1                              serial
+     00000085  _PA5                               serial
+     00000086  _DPS                               serial
+     00000086  _PA6                               serial
+     00000087  _PA7                               serial
+     00000087  _PCON                              serial
+     00000088  _IT0                               serial
+     00000088  _TCON                              serial
+     00000089  _IE0                               serial
+     00000089  _TMOD                              serial
+     0000008A  _IT1                               serial
+     0000008A  _TL0                               serial
+     0000008B  _IE1                               serial
+     0000008B  _TL1                               serial
+     0000008C  _TH0                               serial
+     0000008C  _TR0                               serial
+     0000008D  _TF0                               serial
+     0000008D  _TH1                               serial
+     0000008E  _CKCON                             serial
+     0000008E  _TR1                               serial
+     0000008F  _TF1                               serial
+     00000090  _IOB                               serial
+     00000090  _PB0                               serial
+     00000091  _EXIF                              serial
+     00000091  _PB1                               serial
+     00000092  _PB2                               serial
+     00000092  __XPAGE                            serial
+     00000093  _PB3                               serial
+     00000094  _PB4                               serial
+     00000095  _PB5                               serial
+     00000096  _PB6                               serial
+     00000097  _PB7                               serial
+     00000098  _RI                                serial
+     00000098  _SCON0                             serial
+     00000099  _SBUF0                             serial
+     00000099  _TI                                serial
+     0000009A  _AUTOPTRH1                         serial
+     0000009A  _RB8                               serial
+     0000009B  _AUTOPTRL1                         serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009B  _TB8                               serial
+     0000009C  _REN                               serial
+     0000009D  _AUTOPTRH2                         serial
+     0000009D  _SM2                               serial
+     0000009E  _AUTOPTRL2                         serial
+     0000009E  _SM1                               serial
+     0000009F  _SM0                               serial
+     000000A0  _IOC                               serial
+     000000A0  _PC0                               serial
+     000000A1  _INT2CLR                           serial
+     000000A1  _PC1                               serial
+     000000A2  _INT4CLR                           serial
+     000000A2  _PC2                               serial
+     000000A3  _PC3                               serial
+     000000A4  _PC4                               serial
+     000000A5  _PC5                               serial
+     000000A6  _PC6                               serial
+     000000A7  _PC7                               serial
+     000000A8  _EX0                               serial
+     000000A8  _IE                                serial
+     000000A9  _ET0                               serial
+     000000AA  _EP2468STAT                        serial
+     000000AA  _EX1                               serial
+     000000AB  _EP24FIFOFLGS                      serial
+     000000AB  _ET1                               serial
+     000000AC  _EP68FIFOFLGS                      serial
+     000000AC  _ES0                               serial
+     000000AD  _ET2                               serial
+     000000AE  _ES1                               serial
+     000000AF  _AUTOPTRSETUP                      serial
+     000000AF  _EA                                serial
+     000000B0  _IOD                               serial
+     000000B0  _PD0                               serial
+     000000B1  _IOE                               serial
+     000000B1  _PD1                               serial
+     000000B2  _OEA                               serial
+     000000B2  _PD2                               serial
+     000000B3  _OEB                               serial
+     000000B3  _PD3                               serial
+     000000B4  _OEC                               serial
+     000000B4  _PD4                               serial
+     000000B5  _OED                               serial
+     000000B5  _PD5                               serial
+     000000B6  _OEE                               serial
+     000000B6  _PD6                               serial
+     000000B7  _PD7                               serial
+     000000B8  _IP                                serial
+     000000B8  _PX0                               serial
+     000000B9  _PT0                               serial
+     000000BA  _EP01STAT                          serial
+     000000BA  _PX1                               serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000BB  _GPIFTRIG                          serial
+     000000BB  _PT1                               serial
+     000000BC  _PS0                               serial
+     000000BD  _GPIFSGLDATH                       serial
+     000000BD  _PT2                               serial
+     000000BE  _GPIFSGLDATLX                      serial
+     000000BE  _PS1                               serial
+     000000BF  _GPIFSGLDATLNOX                    serial
+     000000C0  _RI1                               serial
+     000000C0  _SCON1                             serial
+     000000C1  _SBUF1                             serial
+     000000C1  _TI1                               serial
+     000000C2  _RB81                              serial
+     000000C3  _TB81                              serial
+     000000C4  _REN1                              serial
+     000000C5  _SM21                              serial
+     000000C6  _SM11                              serial
+     000000C7  _SM01                              serial
+     000000C8  _CP_RL2                            serial
+     000000C8  _T2CON                             serial
+     000000C9  _C_T2                              serial
+     000000CA  _RCAP2L                            serial
+     000000CA  _TR2                               serial
+     000000CB  _EXEN2                             serial
+     000000CB  _RCAP2H                            serial
+     000000CC  _TCLK                              serial
+     000000CC  _TL2                               serial
+     000000CD  _RCLK                              serial
+     000000CD  _TH2                               serial
+     000000CE  _EXF2                              serial
+     000000CF  _TF2                               serial
+     000000D0  _P                                 serial
+     000000D0  _PSW                               serial
+     000000D1  _FL                                serial
+     000000D2  _OV                                serial
+     000000D3  _RS0                               serial
+     000000D4  _RS1                               serial
+     000000D5  _F0                                serial
+     000000D6  _AC                                serial
+     000000D7  _CY                                serial
+     000000D8  _EICON                             serial
+     000000DB  _INT6                              serial
+     000000DC  _RESI                              serial
+     000000DD  _ERESI                             serial
+     000000DF  _SMOD1                             serial
+     000000E0  _ACC                               serial
+     000000E8  _EIE                               serial
+     000000E8  _EUSB                              serial
+     000000E9  _EI2C                              serial
+     000000EA  _EIEX4                             serial
+     000000EB  _EIEX5                             serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EC  _EIEX6                             serial
+     000000F0  _B                                 serial
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+     000000F8  _EIP                               serial
+     000000F8  _PUSB                              serial
+     000000F9  _PI2C                              serial
+     000000FA  _EIPX4                             serial
+     000000FB  _EIPX5                             serial
+     000000FC  _EIPX6                             serial
+     0000E400  _GPIF_WAVE_DATA                    serial
+     0000E480  _RES_WAVEDATA_END                  serial
+     0000E50D  _GPCR2                             serial
+     0000E600  _CPUCS                             serial
+     0000E601  _IFCONFIG                          serial
+     0000E602  _PINFLAGSAB                        serial
+     0000E603  _PINFLAGSCD                        serial
+     0000E604  _FIFORESET                         serial
+     0000E605  _BREAKPT                           serial
+     0000E606  _BPADDRH                           serial
+     0000E607  _BPADDRL                           serial
+     0000E608  _UART230                           serial
+     0000E609  _FIFOPINPOLAR                      serial
+     0000E60A  _REVID                             serial
+     0000E60B  _REVCTL                            serial
+     0000E60C  _GPIFHOLDAMOUNT                    serial
+     0000E610  _EP1OUTCFG                         serial
+     0000E611  _EP1INCFG                          serial
+     0000E612  _EP2CFG                            serial
+     0000E613  _EP4CFG                            serial
+     0000E614  _EP6CFG                            serial
+     0000E615  _EP8CFG                            serial
+     0000E618  _EP2FIFOCFG                        serial
+     0000E619  _EP4FIFOCFG                        serial
+     0000E61A  _EP6FIFOCFG                        serial
+     0000E61B  _EP8FIFOCFG                        serial
+     0000E620  _EP2AUTOINLENH                     serial
+     0000E621  _EP2AUTOINLENL                     serial
+     0000E622  _EP4AUTOINLENH                     serial
+     0000E623  _EP4AUTOINLENL                     serial
+     0000E624  _EP6AUTOINLENH                     serial
+     0000E625  _EP6AUTOINLENL                     serial
+     0000E626  _EP8AUTOINLENH                     serial
+     0000E627  _EP8AUTOINLENL                     serial
+     0000E628  _ECCCFG                            serial
+     0000E629  _ECCRESET                          serial
+     0000E62A  _ECC1B0                            serial
+     0000E62B  _ECC1B1                            serial
+     0000E62C  _ECC1B2                            serial
+     0000E62D  _ECC2B0                            serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E62E  _ECC2B1                            serial
+     0000E62F  _ECC2B2                            serial
+     0000E630  _EP2FIFOPFH                        serial
+     0000E631  _EP2FIFOPFL                        serial
+     0000E632  _EP4FIFOPFH                        serial
+     0000E633  _EP4FIFOPFL                        serial
+     0000E634  _EP6FIFOPFH                        serial
+     0000E635  _EP6FIFOPFL                        serial
+     0000E636  _EP8FIFOPFH                        serial
+     0000E637  _EP8FIFOPFL                        serial
+     0000E640  _EP2ISOINPKTS                      serial
+     0000E641  _EP4ISOINPKTS                      serial
+     0000E642  _EP6ISOINPKTS                      serial
+     0000E643  _EP8ISOINPKTS                      serial
+     0000E648  _INPKTEND                          serial
+     0000E649  _OUTPKTEND                         serial
+     0000E650  _EP2FIFOIE                         serial
+     0000E651  _EP2FIFOIRQ                        serial
+     0000E652  _EP4FIFOIE                         serial
+     0000E653  _EP4FIFOIRQ                        serial
+     0000E654  _EP6FIFOIE                         serial
+     0000E655  _EP6FIFOIRQ                        serial
+     0000E656  _EP8FIFOIE                         serial
+     0000E657  _EP8FIFOIRQ                        serial
+     0000E658  _IBNIE                             serial
+     0000E659  _IBNIRQ                            serial
+     0000E65A  _NAKIE                             serial
+     0000E65B  _NAKIRQ                            serial
+     0000E65C  _USBIE                             serial
+     0000E65D  _USBIRQ                            serial
+     0000E65E  _EPIE                              serial
+     0000E65F  _EPIRQ                             serial
+     0000E660  _GPIFIE                            serial
+     0000E661  _GPIFIRQ                           serial
+     0000E662  _USBERRIE                          serial
+     0000E663  _USBERRIRQ                         serial
+     0000E664  _ERRCNTLIM                         serial
+     0000E665  _CLRERRCNT                         serial
+     0000E666  _INT2IVEC                          serial
+     0000E667  _INT4IVEC                          serial
+     0000E668  _INTSETUP                          serial
+     0000E670  _PORTACFG                          serial
+     0000E671  _PORTCCFG                          serial
+     0000E672  _PORTECFG                          serial
+     0000E678  _I2CS                              serial
+     0000E679  _I2DAT                             serial
+     0000E67A  _I2CTL                             serial
+     0000E67B  _XAUTODAT1                         serial
+     0000E67C  _XAUTODAT2                         serial
+     0000E67D  _UDMACRCH                          serial
+     0000E67E  _UDMACRCL                          serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E67F  _UDMACRCQUAL                       serial
+     0000E680  _USBCS                             serial
+     0000E681  _SUSPEND                           serial
+     0000E682  _WAKEUPCS                          serial
+     0000E683  _TOGCTL                            serial
+     0000E684  _USBFRAMEH                         serial
+     0000E685  _USBFRAMEL                         serial
+     0000E686  _MICROFRAME                        serial
+     0000E687  _FNADDR                            serial
+     0000E68A  _EP0BCH                            serial
+     0000E68B  _EP0BCL                            serial
+     0000E68D  _EP1OUTBC                          serial
+     0000E68F  _EP1INBC                           serial
+     0000E690  _EP2BCH                            serial
+     0000E691  _EP2BCL                            serial
+     0000E694  _EP4BCH                            serial
+     0000E695  _EP4BCL                            serial
+     0000E698  _EP6BCH                            serial
+     0000E699  _EP6BCL                            serial
+     0000E69C  _EP8BCH                            serial
+     0000E69D  _EP8BCL                            serial
+     0000E6A0  _EP0CS                             serial
+     0000E6A1  _EP1OUTCS                          serial
+     0000E6A2  _EP1INCS                           serial
+     0000E6A3  _EP2CS                             serial
+     0000E6A4  _EP4CS                             serial
+     0000E6A5  _EP6CS                             serial
+     0000E6A6  _EP8CS                             serial
+     0000E6A7  _EP2FIFOFLGS                       serial
+     0000E6A8  _EP4FIFOFLGS                       serial
+     0000E6A9  _EP6FIFOFLGS                       serial
+     0000E6AA  _EP8FIFOFLGS                       serial
+     0000E6AB  _EP2FIFOBCH                        serial
+     0000E6AC  _EP2FIFOBCL                        serial
+     0000E6AD  _EP4FIFOBCH                        serial
+     0000E6AE  _EP4FIFOBCL                        serial
+     0000E6AF  _EP6FIFOBCH                        serial
+     0000E6B0  _EP6FIFOBCL                        serial
+     0000E6B1  _EP8FIFOBCH                        serial
+     0000E6B2  _EP8FIFOBCL                        serial
+     0000E6B3  _SUDPTRH                           serial
+     0000E6B4  _SUDPTRL                           serial
+     0000E6B5  _SUDPTRCTL                         serial
+     0000E6B8  _SETUPDAT                          serial
+     0000E6C0  _GPIFWFSELECT                      serial
+     0000E6C1  _GPIFIDLECS                        serial
+     0000E6C2  _GPIFIDLECTL                       serial
+     0000E6C3  _GPIFCTLCFG                        serial
+     0000E6C4  _GPIFADRH                          serial
+     0000E6C5  _GPIFADRL                          serial
+     0000E6C6  _FLOWSTATE                         serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6C7  _FLOWLOGIC                         serial
+     0000E6C8  _FLOWEQ0CTL                        serial
+     0000E6C9  _FLOWEQ1CTL                        serial
+     0000E6CA  _FLOWHOLDOFF                       serial
+     0000E6CB  _FLOWSTB                           serial
+     0000E6CC  _FLOWSTBEDGE                       serial
+     0000E6CD  _FLOWSTBHPERIOD                    serial
+     0000E6CE  _GPIFTCB3                          serial
+     0000E6CF  _GPIFTCB2                          serial
+     0000E6D0  _GPIFTCB1                          serial
+     0000E6D1  _GPIFTCB0                          serial
+     0000E6D2  _EP2GPIFFLGSEL                     serial
+     0000E6D3  _EP2GPIFPFSTOP                     serial
+     0000E6D4  _EP2GPIFTRIG                       serial
+     0000E6DA  _EP4GPIFFLGSEL                     serial
+     0000E6DB  _EP4GPIFPFSTOP                     serial
+     0000E6DC  _EP4GPIFTRIG                       serial
+     0000E6E2  _EP6GPIFFLGSEL                     serial
+     0000E6E3  _EP6GPIFPFSTOP                     serial
+     0000E6E4  _EP6GPIFTRIG                       serial
+     0000E6EA  _EP8GPIFFLGSEL                     serial
+     0000E6EB  _EP8GPIFPFSTOP                     serial
+     0000E6EC  _EP8GPIFTRIG                       serial
+     0000E6F0  _XGPIFSGLDATH                      serial
+     0000E6F1  _XGPIFSGLDATLX                     serial
+     0000E6F2  _XGPIFSGLDATLNOX                   serial
+     0000E6F3  _GPIFREADYCFG                      serial
+     0000E6F4  _GPIFREADYSTAT                     serial
+     0000E6F5  _GPIFABORT                         serial
+     0000E740  _EP0BUF                            serial
+     0000E780  _EP1OUTBUF                         serial
+     0000E7C0  _EP1INBUF                          serial
+     0000F000  _EP2FIFOBUF                        serial
+     0000F400  _EP4FIFOBUF                        serial
+     0000F800  _EP6FIFOBUF                        serial
+     0000FC00  _EP8FIFOBUF                        serial
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000002 =           2. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007A =         122. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000C  _vprintf_PARM_2                    vprintf
+     0000000D  _bp                                _bp
+     0000002E  __print_format_PARM_2              printf_large
+     00000031  __print_format_PARM_3              printf_large
+     00000034  __print_format_PARM_4              printf_large
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                0000000E    00000006 =           6. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000E  __divslong_PARM_2                  _divulong
+     0000000E  __divulong_PARM_2                  _divulong
+     0000000E  __mullong_PARM_2                   _mullong
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+ISEG                                00000000    00000006 =           6. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                0000003C    000000C4 =         196. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000003C  __start__stack                     brp_main
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XSEG                                00003200    00000001 =           1. bytes (REL,CON,XDATA)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000003  __sdcc_program_startup             brp_main
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000005F    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000062    000008F9 =        2297. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000139  _main                              brp_main
+C:   00000161  _sio0_init                         serial
+C:   00000217  _getchar                           serial
+C:   00000220  __transchar                        serial
+C:   0000022A  _putchar                           serial
+C:   00000257  _vprintf                           vprintf
+C:   00000270  _printf                            vprintf
+C:   00000342  __print_format                     printf_large
+C:   00000850  _strlen                            _strlen
+C:   00000868  __gptrget                          _gptrget
+C:   00000884  __mullong                          _mullong
+C:   00000884  __mullong_dummy                    _mullong
+C:   000008F2  __divulong                         _divulong
+C:   00000957  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               0000095B    00000036 =          54. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+
+Files Linked                              [ module(s) ]
+
+brp_main.rel                              [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxinit.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxclear.rel ]
+../fx2lib/lib/fx2.lib                     [ serial ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ vprintf.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ printf_large.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _strlen.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _gptrget.rel ]
+/usr/bin/../share/sdcc/lib/small/liblong.lib
+                                          [ _mullong.rel ]
+/usr/bin/../share/sdcc/lib/small/liblong.lib
+                                          [ _divulong.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _startup.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _bp.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x3200
+PSEG = 0x3200
+ISEG = 0x0000
+BSEG = 0x0000
+
+

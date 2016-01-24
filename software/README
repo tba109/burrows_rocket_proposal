@@ -1,0 +1,7 @@
+Sat Jan 23 23:53:29 EST 2016
+
+Software for Dave Burrows' rocket proposal. 
+
+Run with something like this:
+
+./brp_usb.py --fits_list fits_list.txt --truncr 4
