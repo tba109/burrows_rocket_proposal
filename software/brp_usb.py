@@ -32,6 +32,7 @@ parser.add_argument("--fits_list",type=str,help="file from which to read")
 parser.add_argument("--truncr",type=int,help="number of LSBs to eliminate via rounding and truncation",default=0)
 parser.add_argument("--verbose",help="Print additional debugging info",action="store_true")
 parser.add_argument("--dryrun",help="Just process the data, don't do anything with USB.",action="store_true")
+parser.add_argument("--countdebug",help="Send counting data.",action="store_true")
 parser.add_argument("--version",action="version",version="%(prog)s 0.1")
 
 args = parser.parse_args()
@@ -65,6 +66,7 @@ for filename in fits_list:
         
     hdulist = fits.open(filename)
 
+    debug_cnt = 0
     scidata = hdulist[0].data
     scidatatr = [[0 for x in range(len(scidata[0]))] for x in range(len(scidata))]
     usbdata = [[0 for x in range(len(scidata[0]))] for x in range(len(scidata))]
@@ -73,6 +75,14 @@ for filename in fits_list:
         for j in range(len(scidata[0])):
             scidatatr[i][j] = int(tr.truncr(scidata[i][j],args.truncr))
             usbdata[i][j] = ((i==0 and j==0)<<15) | (cnt << 12) | (0x0FFF & int(scidatatr[i][j]))
+            if args.countdebug:
+                # Mon Jan 25 14:20:03 EST 2016
+                # TBA_NOTE: This was added as a debug for Ted
+                # TBA_DEBUG
+                usbdata[i][j] = ((i==0 and j==0)<<15) | (cnt << 12) | (0x0FFF & debug_cnt)
+                debug_cnt += 1
+            #END TBA_DEBUG
+            usbdata[i][j] = int('{:016b}'.format(usbdata[i][j])[::-1], 2)
             cnt=(cnt+1)%8
             if(args.verbose):
                 print 'scidata[%d][%d] = %s, scidatatr[%d][%d] = %s, usbdata[%d][%d] = %s' % (i,j,hex(scidata[i][j]).zfill(2),i,j,hex(scidatatr[i][j]).zfill(2),i,j,hex(usbdata[i][j]).zfill(2))
