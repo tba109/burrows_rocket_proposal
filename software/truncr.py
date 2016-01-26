@@ -10,3 +10,9 @@ def truncr(x,n):
         return int(x + (1 << (n-1))) >> n
     else:
         return x
+
+def trunc(x,n):
+    if n != 0:
+        return int(x) >> n
+    else:
+        return x
